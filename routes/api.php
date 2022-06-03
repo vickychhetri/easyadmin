@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\VisitorController;
+use App\Http\Controllers\Admin\ContactController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -19,5 +20,8 @@ use App\Http\Controllers\Admin\VisitorController;
 // });
 
 
-
+//get Visitors
 Route::get('/getvisitor',[VisitorController::class,'GetVisitorDetails']);
+
+//Contact Page Route
+Route::post('/postcontact',[ContactController::class,'PostContactDetails']);
